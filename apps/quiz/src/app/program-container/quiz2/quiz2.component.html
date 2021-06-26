@@ -1,0 +1,23 @@
+<input type="text" [formControl]="filterInput" placeholder="type to filter" />
+
+<table style="margin-top: 10px" class="table-default">
+  <thead>
+    <tr>
+      <th id="indexTH" style="width: 100px">Index</th>
+      <th id="dataTH" style="width: 200px">Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="valueTable.length > 0; else notFound">
+      <tr *ngFor="let value of valueTable; let i = index">
+        <td style="text-align: center">{{ i + 1 }}</td>
+        <td>{{ value }}</td>
+      </tr>
+    </ng-container>
+    <ng-template #notFound>
+      <tr>
+        <td colspan="2">No Result Found</td>
+      </tr>
+    </ng-template>
+  </tbody>
+</table>

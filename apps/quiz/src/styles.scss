@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import './table.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+.menu-link {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  .menu-link-button {
+  }
+}
+
+.program-container {
+  margin-top: 10px;
+}

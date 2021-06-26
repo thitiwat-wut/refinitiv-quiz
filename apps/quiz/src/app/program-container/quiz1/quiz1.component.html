@@ -1,0 +1,17 @@
+<div class="quiz1-container" [formGroup]="form">
+  <div class="column">
+    <input
+      type="number"
+      formControlName="inputNumber"
+      (keyup)="inputNumberkeyup()"
+    />
+  </div>
+  <div class="column">
+    <select formControlName="calculateOptions">
+      <ng-container *ngFor="let option of calculateOptions">
+        <option value="{{ option }}">{{ option }}</option>
+      </ng-container>
+    </select>
+  </div>
+  <div class="column">{{ calculateResult }}</div>
+</div>

@@ -1,0 +1,22 @@
+.quiz1-container {
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: 200px minmax(100px, 1fr) 300px;
+  height: 500px;
+  .column {
+    padding: 0.5em;
+    border: 1px solid black;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
